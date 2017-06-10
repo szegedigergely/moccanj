@@ -1,0 +1,26 @@
+/* LICENSE & DETAILS
+==================================================
+
+	Theme Name: Moccanj Main Style
+	Theme URI: http://dev.moccanj.hu
+	Author: Moccanj Dev Team
+	Author URI: www.moccanj.hu
+	Description: 
+	Version: 1.0.0
+
+==================================================
+*/
+
+/* TOP BANNER */
+.topbanner 						{ background:#31343b; padding:15px 0 15px 0; margin:0 auto; text-align:center; }
+
+/* HEADER */
+nav 							{ background:#26282c; height:80px; padding:0 20px 0 20px; }
+nav .logo 						{ padding:25px 0 25px 0; }
+
+/* CONTENT */
+.container-fluid.content 		{ background:url(../img/background_01.jpg) no-repeat; background-size:cover; min-height:600px; }
+
+
+
+
