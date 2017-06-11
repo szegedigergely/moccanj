@@ -54,25 +54,30 @@ jQuery(document).ready(function($) {
         position: [ 47.632, 19.1207 ],
         icon: "http://maps.google.com/mapfiles/marker_green.png"
     } ];
-    $("#map").gmap3({
-        address: "Budapest, Magyarország",
-        zoom: 13
-    }).cluster({
-        size: 200,
-        markers: addresses,
-        cb: function(markers) {
-            if (markers.length > 1) {
-                // 1 marker stay unchanged (because cb returns nothing)
-                if (markers.length < 20) {
-                    return {
-                        content: "<div class='cluster cluster-1'>" + markers.length + "</div>",
-                        x: -26,
-                        y: -26
-                    };
+    var map = $("#map");
+    console.log(map.length);
+    if(map.length){
+        map.gmap3({
+            address: "Budapest, Magyarország",
+            zoom: 13
+        }).cluster({
+            size: 200,
+            markers: addresses,
+            cb: function(markers) {
+                if (markers.length > 1) {
+                    // 1 marker stay unchanged (because cb returns nothing)
+                    if (markers.length < 20) {
+                        return {
+                            content: "<div class='cluster cluster-1'>" + markers.length + "</div>",
+                            x: -26,
+                            y: -26
+                        };
+                    }
                 }
             }
-        }
-    });
+        });
+    }
+
     /* ==========================================================================
        SELECT 2
        ========================================================================== */
