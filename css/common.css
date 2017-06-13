@@ -512,7 +512,6 @@ html {
 body {
 	background: #fff;
 	/* Fallback for when there is no custom background color defined. */
-	overflow: hidden;
 }
 
 blockquote, q {
@@ -662,7 +661,7 @@ input[type="submit"] {
 	box-sizing: border-box;
 	border: none;
 	font-size: 100%;
-	margin-top: 5px;
+	margin-top: 8px;
 	padding: 0;
 }
 
@@ -1715,6 +1714,7 @@ article.small .details .meta {
 #masthead {
 	background-color: rgb(39,40,43);
 	padding: 20px 0;
+	overflow: hidden;
 	z-index: 999999;
 }
 
@@ -2231,14 +2231,16 @@ article.small .details .meta {
 */
 
 #home_search #sportfinder {
+	display: block;
+	padding: 20px;
+	width: 350px;
+	min-width: 350px;
+	height: 100%;
+	background-color: rgb(39,40,43);
 	position: absolute;
 	z-index: 2;
 	top: 0;
 	left: 0;
-	width: 20%;
-	height: 100%;
-	min-width: 350px;
-	background-color: rgb(39,40,43);
 	cursor: pointer;
 }
 
@@ -2255,7 +2257,7 @@ article.small .details .meta {
 }
 
 #home_search #sportfinder {
-	left: -20%;
+	left: -350px;
 }
 
 #home_search .openclose .fa.fa-angle-right {
@@ -2264,11 +2266,6 @@ article.small .details .meta {
 
 #home_search .openclose .fa.fa-angle-left {
 	display: none;
-}
-
-#sportfinder {
-	padding: 20px;
-	transition: all .3s ease-in;
 }
 
 #sportfinder .openclose {
