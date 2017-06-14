@@ -869,7 +869,7 @@ input[type="submit"] {
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
 	background-color: #1eb3f8;
 	border-radius: 3px;
-	color: rgb(39,40,43);
+	color: rgb(38,40,44);
 	cursor: default;
 	font-size: 14px;
 	font-family: "Montserrat", sans-serif;
@@ -1352,7 +1352,7 @@ textarea {
 	display: inline-block;
 	position: relative;
 	width: 60px;
-	color: rgb(39,40,43);
+	color: rgb(38,40,44);
 	line-height: 20px;
 	text-align: center;
 	border-radius: 3px;
@@ -1649,7 +1649,7 @@ a:hover, a:active {
 
 .widget-top-sports ul li a {
 	padding: 5px 0;
-	color: rgb(39,40,43);
+	color: rgb(38,40,44);
 	text-decoration: none;
 	font-size: 14px;
 	display: block;
@@ -1686,7 +1686,7 @@ article.small .details h3 {
 }
 
 article.small .details h3 a {
-	color: rgb(39,40,43);
+	color: rgb(38,40,44);
 }
 
 article.small .details h3 a:hover {
@@ -1712,7 +1712,7 @@ article.small .details .meta {
 }
 
 #masthead {
-	background-color: rgb(39,40,43);
+	background-color: rgb(38,40,44);
 	padding: 20px 0;
 	overflow: hidden;
 	z-index: 999999;
@@ -1948,7 +1948,7 @@ article.small .details .meta {
 		position: absolute;
 		top: -20px;
 		right: 50px;
-		background-color: rgb(39,40,43);
+		background-color: rgb(38,40,44);
 		border-left: 1px solid #31343b;
 		/*overflow: hidden;*/
 		white-space: nowrap;
@@ -2037,7 +2037,7 @@ article.small .details .meta {
 		position: absolute;
 		top: -20px;
 		right: -10px;
-		background-color: rgb(39,40,43);
+		background-color: rgb(38,40,44);
 		border-left: 1px solid #31343b;
 		/*overflow: hidden;*/
 		white-space: nowrap;
@@ -2085,7 +2085,7 @@ article.small .details .meta {
 }
 
 #colophon {
-	background-color: rgb(39,40,43);
+	background-color: rgb(38,40,44);
 	color: rgb(255,255,255);
 	padding: 60px 0 30px 0;
 }
@@ -2202,7 +2202,7 @@ article.small .details .meta {
 
 #home_search #mini_sportfinder_wrapper h2 {
 	margin-bottom: 27px;
-	color: rgb(39,40,43);
+	color: rgb(38,40,44);
 	font-size: 34px;
 	font-weight: 600;
 	font-family: "Montserrat", sans-serif;
@@ -2218,7 +2218,7 @@ article.small .details .meta {
 }
 
 #home_search #mini_sportfinder_wrapper a {
-	color: rgb(39,40,43);
+	color: rgb(38,40,44);
 	font-family: "Montserrat", sans-serif;
 	font-size: 13px;
 	font-weight: 400;
@@ -2236,13 +2236,38 @@ article.small .details .meta {
 	width: 350px;
 	min-width: 350px;
 	height: 100%;
-	background-color: rgb(39,40,43);
 	position: absolute;
 	z-index: 2;
 	top: 0;
-	left: 0;
+	left: -340px;
 	cursor: pointer;
+	background-color: rgb(38,40,44);
 }
+
+#home_search #sportfinder:before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	opacity: 1;
+	background: rgb(38,40,44); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(38,40,44,1) 0%, rgba(49,52,59,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(38,40,44,1) 0%,rgba(49,52,59,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(38,40,44,1) 0%,rgba(49,52,59,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26282c', endColorstr='#31343b',GradientType=0 ); /* IE6-9 */
+	transition: opacity .3s ease-in;
+}
+
+#home_search #sportfinder:after {
+}
+
+#home_search.side-open #sportfinder:before {
+	opacity: 0;
+}
+
 
 #home_search.side-open #sportfinder {
 	left: 0;
@@ -2254,10 +2279,6 @@ article.small .details .meta {
 
 #home_search.side-open .openclose .fa.fa-angle-right {
 	display: none;
-}
-
-#home_search #sportfinder {
-	left: -350px;
 }
 
 #home_search .openclose .fa.fa-angle-right {
@@ -2277,7 +2298,7 @@ article.small .details .meta {
 	width: 25px;
 	height: 50px;
 	display: block;
-	background-color: rgb(39,40,43);
+	background-color: rgb(38,40,44);
 	z-index: 1;
 }
 
@@ -2365,7 +2386,7 @@ article.small .details .meta {
 	position: absolute;
 	top: 5px;
 	left: -5px;
-	color: rgb(39,40,43);
+	color: rgb(38,40,44);
 	display: none;
 }
 
@@ -2424,7 +2445,7 @@ article.small .details .meta {
 }
 
 #mini_sportfinder {
-	background-color: rgba(39,40,43,.9);
+	background-color: rgba(38,40,44,.9);
     border-radius: 5px;
     padding: 30px;
     margin-bottom: 30px;
@@ -2599,11 +2620,11 @@ article.small .details .meta {
 	font-family: "Montserrat", sans-serif;
 	font-size: 24px;
 	font-weight: bold;
-	color: rgb(39,40,43);
+	color: rgb(38,40,44);
 }
 
 .list-item h3 a, .list-item h3 a:visited {
-	color: rgb(39,40,43);
+	color: rgb(38,40,44);
 }
 
 .list-item h3 a:hover {
