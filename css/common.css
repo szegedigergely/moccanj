@@ -2087,31 +2087,90 @@ article.small .details .meta {
 #colophon {
 	background-color: rgb(38,40,44);
 	color: rgb(255,255,255);
-	padding: 60px 0 30px 0;
+}
+
+#colophon > .row {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+#colophon > .social.container {
+	padding: 45px 0 25px 0;
+	width: 100%;
+	background: rgb(30,32,35);
+	text-align: center;
 }
 
 #colophon h3.nav-title {
 	font-family: "Montserrat", sans-serif;
 	font-size: 18px;
-	margin-bottom: 18px;
+	font-weight: 500;
+	margin-bottom: 15px;
 	line-height: 35px;
+}
+
+#colophon > .social.container h3 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	color: rgb(166,171,179);
+	margin-bottom: 25px;
+}
+
+#colophon > .social.container a.social-link {
+	display: inline-block;
+	margin: 0 5px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	color: rgb(255,255,255);
+	transform: scale(.9);
+	position: relative;
+	z-index: 0;
+}
+
+#colophon > .social.container a.social-link:hover {
+	transform: scale(1);
+}
+
+#colophon > .social.container a.social-link .ink {
+	width: 100%;
+	height: 100%;
+}
+
+#colophon > .social.container a.social-link:hover .ink {
+	-webkit-animation: ripple .6s ease-out;
+	-moz-animation: ripple .6s ease-out;
+	-ms-animation: ripple .6s ease-out;
+	-o-animation: ripple .6s ease-out;
+	animation: ripple .6s ease-out;
+}
+
+#colophon hr {
+	display: block;
+	margin: 15px 0 20px 0;
+	width: 30px;
+	height: 1px;
+	background: rgb(60,62,66);
+	border: none;
 }
 
 #colophon p {
 	font-family: "Montserrat", sans-serif;
 	font-size: 12px;
-	font-weight: 300;
+	font-weight: 400;
 	color: #838994;
 }
 
 #colophon .footer-desc-block a.logo {
-	margin-bottom: 20px;
 	display: inline-block;
 	width: 100%;
 }
 
 #colophon .footer-desc-block a:not(.logo) {
-	color: #1eb3f8;
+	color: rgb(30,179,248);
 	cursor: pointer;
 }
 
@@ -2122,7 +2181,11 @@ article.small .details .meta {
 }
 
 #colophon .footer-nav-block ul li a {
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
 	color: #838994;
+	line-height: 40px;
 }
 
 #colophon .footer-nav-block ul li a:hover {
@@ -2190,14 +2253,92 @@ article.small .details .meta {
 	 HOME STYLES
 	 ========================================================================== */
 #home_search {
-	background: url(../img/background_01.jpg) no-repeat;
-	background-size: cover;
 	min-height: 700px;
 	margin: 0;
 	padding: 0;
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
+}
+
+#cine_bg,
+#cine_bg * {
+	display: block;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.no-csstransforms3d #cine_bg {
+	background-image: url(../img/bg_flat.jpg);
+	background-size: auto 100%;
+}
+
+#cine_bg {
+	overflow: hidden;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+    z-index: 0;
+}
+
+.no-csstransforms3d #cine_bg #threedee_wrapper {
+	display: none;
+}
+
+.csstransforms3d #cine_bg #threedee_wrapper {
+	left: -60px;
+	top: -60px;
+	right: -60px;
+	bottom: -60px;
+}
+
+.csstransforms3d #cine_bg #threedee_wrapper {
+	-webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+#cine_bg .layer_1 {
+	background-image: url(../img/bg_layer_1.jpg);
+    -webkit-transform: translateZ(0px) scale(1.05);
+    -moz-transform: translateZ(0px) scale(1.05);
+    -ms-transform: translateZ(0px) scale(1.05);
+    -o-transform: translateZ(0px) scale(1.05);
+    transform: translateZ(0px) scale(1.05);
+    z-index: 1;
+}
+
+#cine_bg .layer_2 {
+	background-image: url(../img/bg_layer_2.png);
+    -webkit-transform: translateZ(100px) scale(.945);
+    -moz-transform: translateZ(100px) scale(.945);
+    -ms-transform: translateZ(100px) scale(.945);
+    -o-transform: translateZ(100px) scale(.945);
+    transform: translateZ(100px) scale(.945);
+	z-index: 2;
+}
+
+#cine_bg .layer_3 {
+	background-image: url(../img/bg_layer_3.png);
+    -webkit-transform: translateZ(200px) scale(.84);
+    -moz-transform: translateZ(200px) scale(.84);
+    -ms-transform: translateZ(200px) scale(.84);
+    -o-transform: translateZ(200px) scale(.84);
+    transform: translateZ(200px) scale(.84);
+	z-index: 3;
 }
 
 #home_search #mini_sportfinder_wrapper h2 {
@@ -2242,6 +2383,7 @@ article.small .details .meta {
 	left: -340px;
 	cursor: pointer;
 	background-color: rgb(38,40,44);
+	box-shadow: -25px 0px 10px 25px rgba(0,0,0,0.9);
 }
 
 #home_search #sportfinder:before {
@@ -2270,6 +2412,7 @@ article.small .details .meta {
 
 
 #home_search.side-open #sportfinder {
+	box-shadow: -35px 0px 50px 50px rgba(0,0,0,0.4);
 	left: 0;
 }
 
