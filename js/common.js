@@ -32,6 +32,59 @@ jQuery(document).ready(function($) {
 	/* ==========================================================================
 	   GMAP3
 	   ========================================================================== */
+	var custom_marker = {
+		draggable: false,
+		icon: "img/marker_red.png",
+		opitmized: false
+	};
+
+	var clusterize = function(n){
+		var c;
+
+		[2,5,10,15,25].forEach(function(i){
+			if(n >= i){
+				c = i;
+			}
+		})
+
+		return c;
+	}
+
+/* generating random coordinates for testing */
+
+	var addresses = [];
+
+	var randomAddresses = function(n){
+		var center = { lat: 47.501000, lng: 19.065000 };
+		var radius = 0.07;
+		var area = {
+			latMin: 47.470000,
+			latMax: 47.545000,
+			lngMin: 19.000000,
+			lngMax: 19.125000
+		};
+
+		var distortion = (area.lngMax-area.lngMin) / (area.latMax-area.latMin);
+
+		for(var i = 0; i<n; i++){
+			var direction = Math.random() * 2 * Math.PI; // 0 is North
+
+			var distance = Math.pow(Math.random(), 2) * radius;
+
+			var newLat = center.lat + Math.sin(direction) * distance;
+			var newLng = center.lng + Math.cos(direction) * distance * distortion;
+
+			addresses.push({
+				position: [newLat.toFixed(6),newLng.toFixed(6)],
+				options: custom_marker
+			});
+		}
+
+	}
+
+	randomAddresses(50);
+
+/*
 	var addresses = [ {
 		position: [ 47.4979, 19.0402 ],
 		icon: "http://maps.google.com/mapfiles/marker_green.png"
@@ -65,28 +118,24 @@ jQuery(document).ready(function($) {
 	}, {
 		position: [ 47.632, 19.1207 ],
 		icon: "http://maps.google.com/mapfiles/marker_green.png"
-	} ];
+	} ];*/
+
 	var map = $("#map");
 	if(map.length){
 		map.gmap3({
 			address: "Budapest, Magyarország",
-			zoom: 13
+			zoom: 12
 		}).cluster({
 			size: 200,
 			markers: addresses,
 			cb: function(markers) {
 				if (markers.length > 1) {
-					// 1 marker stay unchanged (because cb returns nothing)
-					if (markers.length < 20) {
-						return {
-							content: "<div class='cluster cluster-1'>" + markers.length + "</div>",
-							x: -26,
-							y: -26
-						};
-					}
+					return {
+						content: "<div class='cluster cluster-" + clusterize(markers.length) + "'>" + markers.length + "</div>"
+					};
 				}
 			}
-		});
+		})
 	}
 
 	/* ==========================================================================
